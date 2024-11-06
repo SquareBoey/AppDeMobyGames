@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntentodeApp.MainPage"
+             BackgroundColor="Aquamarine">
+
+    <StackLayout>
+        <!-- Título centrado con padding y color de fondo -->
+        <Frame BackgroundColor="DodgerBlue" Padding="40" HasShadow="False">
+            <Label Text="Gamificador" 
+                   TextColor="White" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" 
+                   HorizontalTextAlignment="Center" />
+        </Frame>
+
+        <!-- Entradas de usuario y contraseña -->
+        <Entry x:Name="txtUsuario" Placeholder="Usuario" Text="{Binding txtUsuario}" PlaceholderColor="White" 
+               HeightRequest="40" TextColor="HotPink" />
+
+        <Entry x:Name="txtPassword" Placeholder="Contraseña" Text="{Binding txtPassword}" PlaceholderColor="White" 
+               HeightRequest="40" TextColor="ForestGreen" IsPassword="True" />
+
+        <!-- Botón de Entrar -->
+        <Button Text="Entrar" TextColor="White" 
+                FontAttributes="Bold" FontSize="Large" 
+                HorizontalOptions="FillAndExpand" 
+                Command="{Binding LoginCommand}" BackgroundColor="#DC8100" />
+    </StackLayout>
+
+</ContentPage>
